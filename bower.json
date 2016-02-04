@@ -1,0 +1,25 @@
+{
+  "name": "ng-ticker",
+  "main": "ng-ticker",
+  "version": "1.0.0",
+  "homepage": "https://github.com/doselect/ng-ticker",
+  "authors": [
+    "Jaipradeesh <jai@doselect.com>"
+  ],
+  "description": "Angular JS Countdown ticker service",
+  "moduleType": [],
+  "keywords": [
+    "countdown",
+    "ticker"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "angular": "~1.4.7",
+    "moment": "~2.11.2"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "name": "ng-ticker",
+  "version": "1.0.0",
+  "description": "Angular JS Countdown ticker service",
+  "main": "ng-ticker.js",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-uglifyjs": "^0.6.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/doselect/ng-ticker.git"
+  },
+  "author": "Jaipradeesh <jai@doselect.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/doselect/ng-ticker/issues"
+  },
+  "homepage": "https://github.com/doselect/ng-ticker#readme"
+}
