@@ -3,7 +3,7 @@ angular.module('ngTicker', [])
   .factory('ngTicker', ['$rootScope', function ($rootScope) {
     return {
       ticker: function (expiry) {
-        var formattedExpiry = moment(expiry, moment.ISO_8601)
+        var formattedExpiry = moment(moment(expiry), moment.ISO_8601)
         var totalSeconds = moment(formattedExpiry).diff(moment(), 'seconds')
 
         var hours = Math.floor(totalSeconds / 3600)

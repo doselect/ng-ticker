@@ -8,10 +8,10 @@ bower install ng-ticker
 
 - Add ngTicker module as dependency in module and controller
 
-- From the controller, pass the expiry object in ISO 8601 format (2016-02-05T17:00:00)
+- From the controller, pass the expiry (String) in ISO 8601 format (2016-02-05T17:00:00)
 
 ```
-$scope.expiry = moment('2016-02-05T17:00:00')
+$scope.expiry = '2016-02-05T17:00:00'
 
 $interval(function () {
   $scope.ticker = countdown.ticker($scope.expiry)
