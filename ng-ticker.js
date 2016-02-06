@@ -13,9 +13,9 @@ angular.module('ngTicker', [])
         // Round off seconds
         seconds = Math.round(seconds * 100) / 100
         return {
-          hours: (hours < 10 ? '0' + hours : hours),
-          minutes: (minutes < 10 ? '0' + minutes : minutes),
-          seconds: (seconds < 10 ? '0' + seconds : seconds)
+          hours: (hours < 0 ? '00' : (hours < 10 ? '0' + hours : hours)),
+          minutes: (hours < 0 ? '00' : (minutes < 10 ? '0' + minutes : minutes)),
+          seconds: (hours < 0 ? '00' : (seconds < 10 ? '0' + seconds : seconds)),
         }
       }
     }

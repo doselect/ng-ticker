@@ -14,7 +14,7 @@ bower install ng-ticker
 $scope.expiry = '2016-02-05T17:00:00'
 
 $interval(function () {
-  $scope.ticker = countdown.ticker($scope.expiry)
+  $scope.ticker = ngTicker.ticker($scope.expiry)
 }, 1000)
 ```
 
