@@ -1,7 +1,7 @@
 {
   "name": "ng-ticker",
   "main": "ng-ticker",
-  "version": "1.0.1",
+  "version": "1.2.0",
   "homepage": "https://github.com/doselect/ng-ticker",
   "authors": [
     "Jaipradeesh <jai@doselect.com>"
