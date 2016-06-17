@@ -12,19 +12,17 @@ bower install ng-ticker
 
 ```
 $scope.expiry = '2016-02-05T17:00:00'
-
-$interval(function () {
-  $scope.ticker = ngTicker.ticker($scope.expiry)
-}, 1000)
+$scope.ticker = ngTicker.ticker($scope.expiry)
 ```
 
-- $scope.ticker would look like
+- Listen for `ngTicker:tick` and `ngTicker:expired` signals
 
 ```
-{
-  hours : 02,
-  minutes : 08,
-  seconds : 10
-}
+$scope.$on('ngTicker:tick', function (tickMeta) {
+  // {{hours : 02, minutes : 08, seconds : 10}} tickMeta
+})
 
-> Note: Wrapped in `interval` to refresh the object every second.
+$scope.$on('ngTicker:expired', function (tickMeta) {
+  // {{hours : 00, minutes : 00, seconds : 00}} tickMeta
+})
+```
