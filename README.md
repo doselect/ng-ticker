@@ -18,11 +18,11 @@ $scope.ticker = ngTicker.ticker($scope.expiry)
 - Listen for `ngTicker:tick` and `ngTicker:expired` signals
 
 ```
-$scope.$on('ngTicker:tick', function (tickMeta) {
+$scope.$on('ngTicker:tick', function (event, tickMeta) {
   // {{hours : 02, minutes : 08, seconds : 10}} tickMeta
 })
 
-$scope.$on('ngTicker:expired', function (tickMeta) {
+$scope.$on('ngTicker:expired', function (event, tickMeta) {
   // {{hours : 00, minutes : 00, seconds : 00}} tickMeta
 })
 ```
