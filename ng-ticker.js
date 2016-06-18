@@ -3,7 +3,7 @@ angular.module('ngTicker', [])
   .factory('ngTicker', ['$rootScope', '$interval', function ($rootScope, $interval) {
     return {
       ticker: function (expiry) {
-        $interval(function () {
+        var startTicker = $interval(function () {
           var formattedExpiry = moment(moment(expiry), moment.ISO_8601)
           var totalSeconds = moment(formattedExpiry).diff(moment(), 'seconds')
 
@@ -23,10 +23,17 @@ angular.module('ngTicker', [])
           // Broadcast ticker events
           if (JSON.stringify(tickMeta) === JSON.stringify({'hours': '00', 'minutes': '00', 'seconds': '00'})) {
             $rootScope.$broadcast('ngTicker:expired', tickMeta)
+            StopTicker()
           } else {
             $rootScope.$broadcast('ngTicker:tick', tickMeta)
           }
         }, 1000)
+
+        var stopTicker = function () {
+          $interval.cancel(startTicker)
+        }
+
+        startTicker()
       }
     }
   }])
