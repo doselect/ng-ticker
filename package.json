@@ -1,6 +1,6 @@
 {
   "name": "ng-ticker",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "Angular JS Countdown ticker service",
   "main": "ng-ticker.js",
   "devDependencies": {
