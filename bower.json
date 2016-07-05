@@ -1,12 +1,12 @@
 {
   "name": "ng-ticker",
   "main": "ng-ticker",
-  "version": "1.2.2",
+  "version": "1.3.0",
   "homepage": "https://github.com/doselect/ng-ticker",
   "authors": [
     "Jaipradeesh <jai@doselect.com>"
   ],
-  "description": "Angular JS Countdown ticker service",
+  "description": "Angular JS ticker service",
   "moduleType": [],
   "keywords": [
     "countdown",
