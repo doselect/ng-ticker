@@ -45,18 +45,20 @@ angular.module('ngTicker', [])
             var totalSeconds = moment().diff(moment(formattedExpiry), 'seconds')
             var duration = moment.duration(totalSeconds + 1, 'seconds')
 
+            var days = duration.days()
             var hours = duration.hours()
             var minutes = duration.minutes()
             var seconds = duration.seconds()
 
             var tickMeta = {
+              days: (days < 0 ? '00' : (days < 10 ? '0' + days : days)),
               hours: (hours < 0 ? '00' : (hours < 10 ? '0' + hours : hours)),
               minutes: (minutes < 0 ? '00' : (minutes < 10 ? '0' + minutes : minutes)),
               seconds: (seconds < 0 ? '00' : (seconds < 10 ? '0' + seconds : seconds))
             }
 
             // Broadcast ticker events
-            if (JSON.stringify(tickMeta) === JSON.stringify({'hours': '00', 'minutes': '00', 'seconds': '00'})) {
+            if (JSON.stringify(tickMeta) === JSON.stringify({'days': '00', 'hours': '00', 'minutes': '00', 'seconds': '00'})) {
               $rootScope.$broadcast('ngTicker:tick' + tickerInstance, tickMeta)
               $rootScope.$broadcast('ngTicker:notStarted' + tickerInstance, tickMeta)
               $interval.cancel(tickerFunc)
