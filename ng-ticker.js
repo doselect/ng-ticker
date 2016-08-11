@@ -11,10 +11,10 @@ angular.module('ngTicker', [])
             var totalSeconds = moment(formattedExpiry).diff(moment(), 'seconds')
 
             var days = Math.floor(totalSeconds / 86400)
-            var hours = Math.floor(totalSeconds / 3600)
-            var minutes = Math.floor((totalSeconds - (hours * 3600)) / 60)
-            var seconds = totalSeconds - (hours * 3600) - (minutes * 60)
-
+            var hours = Math.floor((totalSeconds  - (days * 86400)) / 3600)
+            var minutes = Math.floor((totalSeconds -  (days * 86400) - (hours * 3600)) / 60)
+            var seconds = totalSeconds - (days * 86400) - (hours * 3600) - (minutes * 60)
+ 
             // Round off seconds
             seconds = Math.round(seconds * 100) / 100
 
