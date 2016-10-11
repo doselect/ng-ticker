@@ -1,7 +1,7 @@
 {
   "name": "ng-ticker",
   "main": "ng-ticker",
-  "version": "1.3.2",
+  "version": "1.3.3",
   "homepage": "https://github.com/doselect/ng-ticker",
   "authors": [
     "Jaipradeesh <jai@doselect.com>"
@@ -19,7 +19,7 @@
     "bower_components"
   ],
   "dependencies": {
-    "angular": "~1.4.7",
-    "moment": "~2.11.2"
+    "angular": "1.5.3",
+    "moment": "2.11.2"
   }
 }
