@@ -11,9 +11,9 @@ angular.module('ngTicker', [])
             var totalSeconds = moment(formattedExpiry).diff(moment(), 'seconds')
 
             var days = Math.floor(totalSeconds / 86400)
-            var hours = Math.floor((totalSeconds  - (days * 86400)) / 3600)
-            var minutes = Math.floor((totalSeconds -  (days * 86400) - (hours * 3600)) / 60)
-            var seconds = totalSeconds - (days * 86400) - (hours * 3600) - (minutes * 60)
+	    var hours = Math.floor((totalSeconds - (days * 86400)) / 3600)
+	    var minutes = Math.floor((totalSeconds - (days * 86400) - (hours * 3600)) / 60)
+	    var seconds = totalSeconds - (days * 86400) - (hours * 3600) - (minutes * 60)
  
             // Round off seconds
             seconds = Math.round(seconds * 100) / 100
@@ -47,7 +47,7 @@ angular.module('ngTicker', [])
             var totalSeconds = moment().diff(moment(formattedExpiry), 'seconds')
             var duration = moment.duration(totalSeconds + 1, 'seconds')
 
-            var days = duration.days()
+            var days = Math.floor(totalSeconds / 86400)
             var hours = duration.hours()
             var minutes = duration.minutes()
             var seconds = duration.seconds()
